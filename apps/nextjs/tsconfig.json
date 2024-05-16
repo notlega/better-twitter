@@ -1,0 +1,20 @@
+{
+  "extends": "@better-twitter/configs/tsconfig.json",
+  "compilerOptions": {
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "module": "CommonJS",
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "typeRoots": ["./node_modules/@types"],
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules", "__tests__"]
+}

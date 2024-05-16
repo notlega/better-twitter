@@ -1,0 +1,7 @@
+{
+  "name": "@better-twitter/configs",
+  "version": "1.0.0",
+  "files": [
+    "tsconfig.json"
+  ]
+}

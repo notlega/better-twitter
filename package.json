@@ -1,0 +1,35 @@
+{
+  "name": "better-twitter",
+  "version": "0.0.0",
+  "description": "Twitter but with better searching capabilities",
+  "scripts": {
+    "build": "nx run-many -t build",
+    "build:apps": "nx run-many -t build -p @better-twitter/nextjs",
+    "build:nextjs": "nx run @better-twitter/nextjs:build",
+    "ci": "pnpm install --frozen-lockfile",
+    "clean": "nx run-many -t clean",
+    "dev": "nx run-many -t dev -p @better-twitter/nextjs",
+    "dev:nextjs": "nx run @better-twitter/nextjs:dev",
+    "format": "nx run-many -t format",
+    "lint": "nx run-many -t lint",
+    "postinstall": "echo none yet",
+    "start": "nx run-many -t start -p @better-twitter/nextjs",
+    "start:nextjs": "nx run @better-twitter/nextjs:start"
+  },
+  "keywords": [
+    "twitter",
+    "better"
+  ],
+  "author": {
+    "name": "Ong Hin Journ",
+    "email": "onghinjourn@gmail.com",
+    "url": "https://notlega.github.io"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20",
+    "eslint": "^8",
+    "nx": "19.0.2",
+    "typescript": "^5"
+  }
+}
