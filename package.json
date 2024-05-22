@@ -27,9 +27,10 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^20",
     "eslint": "^8",
-    "nx": "19.0.2",
+    "nx": "19.0.2"
+  },
+  "dependencies": {
     "typescript": "^5"
   }
 }
