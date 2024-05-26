@@ -1,49 +1,26 @@
-'use client';
+import { FaTwitter } from 'react-icons/fa';
+import { GoGear } from 'react-icons/go';
 
-import Link from 'next/link';
-
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
-  navigationMenuTriggerStyle,
-} from '@/components/ui/navigation-menu';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 const Home = () => {
   return (
-    <header className="sticky bottom-0 left-0 z-50 w-full">
-      <div className="container flex h-14 max-w-screen-2xl justify-center items-center">
-        <NavigationMenu>
-          <NavigationMenuList>
-            <NavigationMenuItem className="m-0">
-              <Link href="/" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Leaderboard
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem className="m-0">
-              <Link href="/rules" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Rules
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem className="m-0">
-              <Link href={'a'} legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Qualifier Booking
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
+    <header className="grid grid-rows-2 h-[6.625rem] w-full">
+      <div className="grid grid-cols-3 px-4">
+        <div className="flex justify-start items-center">
+          <Avatar className="w-8 h-8">
+            <AvatarImage src="https://github.com/notlega.png" alt="@notlega" />
+            <AvatarFallback>NL</AvatarFallback>
+          </Avatar>
+        </div>
+        <div className="flex justify-center items-center">
+          <FaTwitter className="w-7 h-7" />
+        </div>
+        <div className="flex justify-end items-center px-1">
+          <GoGear className="w-5 h-5" />
+        </div>
       </div>
+      <div></div>
     </header>
   );
 };
