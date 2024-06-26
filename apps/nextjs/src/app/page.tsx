@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { DateTime } from 'luxon';
 import { FaTwitter } from 'react-icons/fa';
 import { GoGear } from 'react-icons/go';
 import { BsThreeDots } from 'react-icons/bs';
@@ -96,7 +97,10 @@ const Home = () => {
                   <CardUsername href={`/${samplePost.user.username}`}>
                     @{samplePost.user.username}
                   </CardUsername>
-                  <CardDate>&middot; {samplePost.date.getTime()}</CardDate>
+                  <CardDate>
+                    &middot;{' '}
+                    {DateTime.fromJSDate(samplePost.date).toRelative()}
+                  </CardDate>
                 </div>
                 <button className="flex items-center">
                   <BsThreeDots className="w-4 h-4" />
