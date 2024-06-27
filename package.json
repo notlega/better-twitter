@@ -26,6 +26,7 @@
     "url": "https://notlega.github.io"
   },
   "license": "ISC",
+  "packageManager": "pnpm@9.4.0",
   "devDependencies": {
     "@eslint/js": "^9.3.0",
     "@next/eslint-plugin-next": "^14.2.3",
